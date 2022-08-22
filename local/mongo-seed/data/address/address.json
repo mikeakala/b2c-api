@@ -1,0 +1,49 @@
+[
+
+    {
+        "active" : true,
+        "city" : "Halifax",
+        "houseNumber" : 13445,
+        "province" : "Nova Scotia",
+        "streetName" : "Lacewood",
+        "id" : 1,
+        "_id": { "$oid": "59270007de9f6bd80931e687" }
+    },
+    {
+        "active" : true,
+        "city" : "Toronto",
+        "houseNumber" : 13,
+        "province" : "Ontario",
+        "streetName" : "downtown",
+        "id" : 2,
+        "_id": { "$oid": "60270007de9f6bd80931e688" }
+    },
+    {
+        "active" : true,
+        "city" : "Halifax",
+        "houseNumber" : 100,
+        "province" : "Nova Scotia",
+        "streetName" : "Bayers Lake",
+        "id" : 3,
+        "_id": { "$oid": "61270007de9f6bd80931e689" }
+    },
+    {
+        "active" : true,
+        "city" : "Waterloo",
+        "houseNumber" : 8,
+        "province" : "Ontario",
+        "streetName" : "Kings Street",
+        "id" : 4,
+        "_id": { "$oid": "62270007de9f6bd80931e690" }
+    },
+    {
+        "active" : true,
+        "city" : "Halifax",
+        "houseNumber" : 25,
+        "province" : "Nova scotia",
+        "streetName" : "Mumford Rd",
+        "id" : 5,
+        "_id": { "$oid": "63270007de9f6bd80931e691" }
+    }
+
+]

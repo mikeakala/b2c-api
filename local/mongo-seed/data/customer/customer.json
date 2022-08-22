@@ -1,0 +1,49 @@
+[
+
+    {
+        "_id" : { "$oid": "611414f7ebc03f5e88ef7cec" },
+        "name" : "John Walsh",
+        "phoneNumber" : "+10989765612",
+        "email" : "abc@abc.com",
+        "addressId" : 1,
+        "id" : 1,
+        "active" : true
+    },
+    {
+        "_id" : { "$oid": "621414f7ebc03f5e88ef7cec" },
+        "name" : "Julius Mark",
+        "phoneNumber" : "+10989765613",
+        "email" : "julius@abc.com",
+        "addressId" : 2,
+        "id" : 2,
+        "active" : true
+    },
+    {
+        "_id" : { "$oid": "631414f7ebc03f5e88ef7cec" },
+        "name" : "Peter Dun",
+        "phoneNumber" : "+10989765614",
+        "email" : "peter@abc.com",
+        "addressId" : 3,
+        "id" : 3,
+        "active" : true
+    },
+    {
+        "_id" : { "$oid": "641414f7ebc03f5e88ef7cec" },
+        "name" : "Julio Gonzalez",
+        "phoneNumber" : "+10989765817",
+        "email" : "julio@abc.com",
+        "addressId" : 4,
+        "id" : 4,
+        "active" : true
+    },
+    {
+        "_id" : { "$oid": "619414f7ebc03f5e88ef7cec" },
+        "name" : "Seth Walsh",
+        "phoneNumber" : "+10989768612",
+        "email" : "seth@abc.com",
+        "addressId" : 5,
+        "id" : 5,
+        "active" : true
+    }
+
+]

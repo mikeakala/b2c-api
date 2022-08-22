@@ -1,0 +1,41 @@
+version: '3.5'
+services:
+  mongodb:
+    image: mongo:3.6
+    container_name: "mongodb"
+    hostname: mongodb
+    environment:
+      MONGO_DATA_DIR: "/data/db"
+      MONGO_LOG_DIR: "/dev/null"
+      MONGO_INITDB_ROOT_USERNAME: "user"
+      MONGO_INITDB_ROOT_PASSWORD: "pass"
+      MONGO_INITDB_DATABASE: "b2c-api"
+    ports:
+    - 27017:27017
+    command: mongod --logpath=/dev/null # --quiet
+
+  b2c-api-mongo-seed:
+    image: pkosiec/mongo-seeding:3.2.0
+    hostname: b2c-api-mongo-seed
+    depends_on:
+    - mongodb
+    volumes:
+    - ${PWD}/mongo-seed/data:/mongo-seed/data
+    working_dir: /mongo-seed/data
+    environment:
+      DB_URI: mongodb://user:pass@mongodb:27017/b2c-api?authMechanism=SCRAM-SHA-1&authSource=admin
+
+  b2c-api:
+    build: ..
+    depends_on:
+    - mongodb
+    - b2c-api-mongo-seed
+    ports:
+    - 3000:3000
+    environment:
+      NODE_ENV: 'test'
+      APP_NAME: 'b2c-api'
+    entrypoint: "bash -c 'echo Checking if Mongo has been seeded && \
+            until ! ping -q -c1 b2c-api-mongo-seed >/dev/null 2>&1; do echo \".\"; sleep 5; done && \
+            yarn start serve
+            '"
