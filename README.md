@@ -121,7 +121,7 @@ The swagger can be altered in the `.env` file.
    ```json
 {
     "name": "Tosh Jay",
-    "phoneNumber": "+10989765612",
+    "phoneNumber": "+10989765632",
     "email": "abc@abc.com",
     "address": {
       "city": "Halifax",
